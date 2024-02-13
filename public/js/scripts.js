@@ -43,3 +43,23 @@ $(document).ready(function() {
     addCards(cardList);
     $('.modal').modal();
 });
+
+$(document).ready(function(){
+    $('#additionForm').submit(function(event){
+        event.preventDefault(); 
+        
+        // Get input values
+        var firstNumber = parseFloat($('#first_number').val());
+        var secondNumber = parseFloat($('#second_number').val());
+        
+        // Make an HTTP GET request to the API
+        $.get('/add', { firstNumber, secondNumber })
+            .done(function(response) {
+                // Add result to the DOM
+                $('#result').text('The sum of ' + firstNumber + ' and ' + secondNumber + ' is ' + response.result);
+            })
+            .fail(function(error) {
+                console.error('Error:', error.responseText);
+            });
+    });
+});

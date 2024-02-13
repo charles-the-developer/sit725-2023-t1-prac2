@@ -35,6 +35,40 @@
                 <div class="col s12 center-align"> <img class="materialboxed materialboxed-image" src="images/livedemo.png"> </div>
                 <div class="col s12 center-align"> <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a> </div>
             </div>
+
+            <!-- Form for addition -->
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Addition Form</h2>
+                        <form id="additionForm">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="first_number" type="number" class="validate" required>
+                                    <label for="first_number">First Number</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="second_number" type="number" class="validate" required>
+                                    <label for="second_number">Second Number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 center-align">
+                                    <button class="btn waves-effect waves-light" type="submit">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display the result -->
+            <h3 id="result" style="color: black; text-align: center"></h3>
+
+            <br>
+            <br>
+            <br>
+
             <div class="row" id="card-section">
                 <div class="col s4 center-align">
                     <div class="card medium">
